@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Myxin"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/myxin"
+license = "GNU General Public License v3 or later (GPLv3+)"
+author = 'SKillz and Jean'
+author_email = "skillz@example.com"
+
+[tool.briefcase.app.myxin]
+formal_name = "Myxin"
+description = "Youtube Downloader"
+icon = "src/myxin/resources/myxin"
+sources = ['src/myxin']
+requires = []
+
+
+[tool.briefcase.app.myxin.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.myxin.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.myxin.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+
+# Mobile deployments
+[tool.briefcase.app.myxin.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.myxin.android]
+requires = [
+    'toga-android>=0.3.0.dev18',
+]
